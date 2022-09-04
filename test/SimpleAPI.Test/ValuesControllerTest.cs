@@ -8,6 +8,14 @@ public class ValuesControllerTest
         _controller = new ValuesController();
     }
 
+    [Fact]
+    public void GetValues()
+    {
+        var returnValue = _controller.get().Value;
+
+        Assert.Equal(4, returnValue.Count());
+    }
+
     
 
     [Fact]
